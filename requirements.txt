@@ -14,5 +14,5 @@ rsa==4.9
 
 urllib3==1.26.16
 
-sqlite==2.6.0
+sqlite3==2.6.0
 gunicorn==20.0.4
