@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Data</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Data of Users</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Prob ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Problem</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Time</th>
+              </tr>
+            {% for i in data%}
+            <tr>
+            {% for j in range(17)%}
+            <td>{{i[j]}}</td>
+            {% endfor %}
+            </tr>
+            {% endfor %}
+
+
+        </table>
+    </body>
+</html>

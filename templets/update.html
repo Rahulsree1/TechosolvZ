@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Admin Update</title>
+        <style>
+            .input {
+  width: 100%;
+  max-width: 220px;
+  height: 45px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1.5px solid lightgrey;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  box-shadow: 0px 0px 20px -18px;
+}
+
+.input:hover {
+  border: 2px solid lightgrey;
+  box-shadow: 0px 0px 20px -17px;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  border: 2px solid grey;
+}
+
+            h1{
+                text-align: center;
+                font-size: 60px;
+                font-weight: bolder;
+            }
+            h2{
+                text-align: center;
+                font-size: 30px;
+                font-weight: bolder;
+                color: red;
+            }
+            label{
+                font-size: 30px;
+                 font-weight: bolder;
+                 padding: 10px;
+            }
+            button {
+ position: relative;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 5px;
+ background: #183153;
+ font-family: "Montserrat", sans-serif;
+ box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+ overflow: hidden;
+ border: none;
+}
+
+button:after {
+ content: " ";
+ width: 0%;
+ height: 100%;
+ background: #7485f4;
+ position: absolute;
+ transition: all 0.4s ease-in-out;
+ right: 0;
+}
+
+button:hover::after {
+ right: auto;
+ left: 0;
+ width: 100%;
+}
+
+button span {
+ text-align: center;
+ text-decoration: none;
+ width: 100%;
+ padding: 18px 25px;
+ color: #fff;
+ font-size: 1.125em;
+ font-weight: 700;
+ letter-spacing: 0.3em;
+ z-index: 20;
+ transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+ color: #183153;
+ animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+ 0% {
+  transform: scale(1);
+ }
+
+ 50% {
+  transform: scale(0.95);
+ }
+
+ 100% {
+  transform: scale(1);
+ }
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>TechosolvZ Admin</h1>
+        <h2>Update Data</h2>
+        <form action="/adminupdate" method="post">
+            <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;margin: 40px;">
+            <label>Prob ID</label>
+            <input placeholder="Enter ProbID" type="text" name="pid" class="input">
+            <label>Colum</label>
+            <select style="width: 14%;height:40px;border-radius: 20px;font-size: 17px;text-align: center;" name="col">
+                <option value="status">Status</option>
+                <option value="fname">First Name</option>
+                <option value="lname">Last Name</option>
+                <option value="email">Email</option>
+                <option value="Phone">Phone No</option>
+                <option value="Problem">Problem Text</option>
+            </select>
+            <label>Value or Data</label>
+            <input placeholder="Enter Value or Data" type="text" name="val" class="input">
+            <button type="submit" style="margin: 20px;">
+                <span>Update</span>
+              </button>
+        </div>
+        </form>
+
+
+    </body>
+</html>

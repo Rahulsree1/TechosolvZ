@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Admin Page</title>
+        <style>
+            button {
+  padding: 12.5px 30px;
+  margin: 20px  ;
+  border: 0;
+  border-radius: 100px;
+  background-color: #7485f4;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #6fc5ff;
+  box-shadow: 0 0 20px #6fc5ff50;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: #3d94cf;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+            h1{
+                text-align: center;
+                font-size: 60px;
+                font-weight: bolder;
+            }
+            h2{
+                text-align: center;
+                font-size: 30px;
+                color: red;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h1>TechosolvZ</h1>
+        <h2>Admin Page</h2>
+        <div style="display: flex;justify-content: center;align-items: center;">
+            <form method="post" id="for">
+                <button type="submit" o name="01" id="01" onclick="addval('01','data','for','/data')">
+                    Data
+                </button>
+                <button type="submit"  name="02" id="02" onclick="addval('02','updb','for','/up')">
+                    Update DB
+                </button>
+
+            </form>
+        </div>
+        <script>
+            function addval(id,val,fid,ur){
+                var ele = document.getElementById(id);
+                ele.setAttribute("value",val);
+                var ele2 = document.getElementById(fid)
+                ele2.setAttribute("action",ur)
+            }
+
+            
+        </script>
+    </body>
+</html>
